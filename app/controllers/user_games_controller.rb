@@ -4,9 +4,9 @@ class UserGamesController < ApplicationController
   def index
 #    @user_games = UserGame.all
     @user_games = if params[:user]
-      UserGame.find_all_by_user(params[:user])
+      UserGame.find_all_by_user_id(params[:user])
     elsif params[:game]
-      UserGame.find_all_by_game(params[:game])
+      UserGame.find_all_by_game_id(params[:game])
     else
       UserGame.all
     end
