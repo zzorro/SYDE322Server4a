@@ -1,4 +1,15 @@
 SYDE322Server4a::Application.routes.draw do
+#  get "static_pages/home"
+  root to: 'static_pages#home'
+
+  resources :songs
+
+  resources :user_games
+
+  resources :games
+
+  resources :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

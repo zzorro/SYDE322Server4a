@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @user_game.user_id %>
+</p>
+
+<p>
+  <b>Game:</b>
+  <%= @user_game.game_id %>
+</p>
+
+<p>
+  <b>Round score:</b>
+  <%= @user_game.round_score %>
+</p>
+
+<p>
+  <b>Isadmin:</b>
+  <%= @user_game.isAdmin %>
+</p>
+
+<p>
+  <b>Iswinner:</b>
+  <%= @user_game.isWinner %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_game_path(@user_game) %> |
+<%= link_to 'Back', user_games_path %>
