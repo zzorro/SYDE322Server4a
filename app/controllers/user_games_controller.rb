@@ -2,7 +2,14 @@ class UserGamesController < ApplicationController
   # GET /user_games
   # GET /user_games.json
   def index
-    @user_games = UserGame.all
+#    @user_games = UserGame.all
+    @user_games = if params[:user]
+      UserGame.find_all_by_user(params[:user])
+    elsif params[:game]
+      UserGame.find_all_by_game(params[:game])
+    else
+      UserGame.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
