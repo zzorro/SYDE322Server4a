@@ -1,10 +1,32 @@
-<div class="center hero-unit">
-  <h1>Welcome to SYDE322 Server from 4a</h1>
+<div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Pages</li>
+              <li><%= link_to "Scoreboard",    '../users' %></li>
+              <li><%= link_to "Users",    '../users' %></li>
+              <li><%= link_to "Game Rooms",    '../games' %></li>
+              <li><%= link_to "Song List",    '../songs' %></li>              
+              <li class="nav-header">Actions</li>
+              <li><%= link_to "Create new user",    '../users/new' %></li>              
+              <li><%= link_to "Create new room",    '../games/new' %></li>                            
+              <li><%= link_to "Create new song",    '../songs/new' %></li>                            
+              <li class="nav-header">Others</li>
+              <li><%= link_to "User_game Date",    '../user_games' %></li>                                  
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+         <div class="center hero-unit">
+           <h1>Welcome to SYDE322 Server Team 4a</h1>
 
-  <h2>
-    This is the home page for the sample server.
-  </h2>
+           <h2>
+             This is the home page for the demo server.
+           </h2>
 
-</div>
-
+         </div>
+        </div>
+   </div>
+  </div>
 
