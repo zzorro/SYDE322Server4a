@@ -7,6 +7,8 @@ class UsersController < ApplicationController
       User.find_all_by_name(params[:name])
     elsif params[:id]
       User.find_all_by_id(params[:id])
+    elsif params[:sort]
+      User.order(params[:sort]+" DESC")
     else
       User.all
     end
