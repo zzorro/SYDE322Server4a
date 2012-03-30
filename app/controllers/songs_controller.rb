@@ -2,7 +2,16 @@ class SongsController < ApplicationController
   # GET /songs
   # GET /songs.json
   def index
-    @songs = Song.all
+    # @songs = Song.all
+    @songs = if params[:name]
+      Song.find_all_by_name(params[:name])
+    elsif params[:id]
+      Song.find_all_by_id(params[:id])
+    elsif params[:artist]
+      Song.find_all_by_artist(params[:artist])
+    else
+      Song.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
