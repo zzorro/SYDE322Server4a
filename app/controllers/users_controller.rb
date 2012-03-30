@@ -2,7 +2,16 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+#    @users = User.all
+    @users = if params[:name]
+      User.find_all_by_name(params[:name])
+    elsif params[:id]
+      User.find_all_by_id(params[:id])
+    else
+      User.all
+    end
+
+
 
     respond_to do |format|
       format.html # index.html.erb
