@@ -1,11 +1,9 @@
-<h1>Listing games</h1>
+<h1>Game Rooms</h1>
 
-<table>
+<table class="table table-striped">
   <tr>
     <th>Name</th>
     <th>Open</th>
-    <th></th>
-    <th></th>
     <th></th>
   </tr>
 
@@ -13,13 +11,13 @@
   <tr>
     <td><%= game.name %></td>
     <td><%= game.open %></td>
-    <td><%= link_to 'Show', game %></td>
-    <td><%= link_to 'Edit', edit_game_path(game) %></td>
-    <td><%= link_to 'Destroy', game, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', game, class: "btn btn-small" %>
+    <%= link_to 'Edit', edit_game_path(game), class: "btn btn-small" %>
+    <%= link_to 'Destroy', game, confirm: 'Are you sure?', method: :delete, class: "btn btn-small" %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Game', new_game_path %>
+<%= link_to 'New Game', new_game_path, class: "btn btn-large btn-primary page_button" %>

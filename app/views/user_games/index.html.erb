@@ -1,14 +1,12 @@
 <h1>Listing user_games</h1>
 
-<table>
+<table class="table table-stripped">
   <tr>
     <th>User</th>
     <th>Game</th>
     <th>Round score</th>
     <th>Isadmin</th>
     <th>Iswinner</th>
-    <th></th>
-    <th></th>
     <th></th>
   </tr>
 
@@ -19,13 +17,13 @@
     <td><%= user_game.round_score %></td>
     <td><%= user_game.isAdmin %></td>
     <td><%= user_game.isWinner %></td>
-    <td><%= link_to 'Show', user_game %></td>
-    <td><%= link_to 'Edit', edit_user_game_path(user_game) %></td>
-    <td><%= link_to 'Destroy', user_game, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', user_game, class: "btn btn-small" %>
+    <%= link_to 'Edit', edit_user_game_path(user_game), class: "btn btn-small" %>
+    <%= link_to 'Destroy', user_game, confirm: 'Are you sure?', method: :delete, class: "btn btn-small" %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New User game', new_user_game_path %>
+<%= link_to 'New User game', new_user_game_path, class: "btn btn-large btn-primary page_button" %>

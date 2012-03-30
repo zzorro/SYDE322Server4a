@@ -1,15 +1,15 @@
-<h1>Listing users</h1>
+<h1>Users</h1>
 
-<table>
-  <tr>
+<table class="table table-stripped">
+  <thead>  
+   <tr>
     <th>Name</th>
     <th>Games played</th>
     <th>Games won</th>
     <th>Running score</th>
     <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+   </tr>
+  </thead>
 
 <% @users.each do |user| %>
   <tr>
@@ -17,13 +17,13 @@
     <td><%= user.games_played %></td>
     <td><%= user.games_won %></td>
     <td><%= user.running_score %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', user, class: "btn btn-small" %>
+    <%= link_to 'Edit', edit_user_path(user), class: "btn btn-small" %>
+    <%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete, class: "btn btn-small" %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'New User', new_user_path, class: "btn btn-large btn-primary page_button" %>
