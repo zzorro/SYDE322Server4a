@@ -3,6 +3,7 @@
 <table class="table table-stripped">
   <thead>  
    <tr>
+    <th>ID</th>    
     <th>Name</th>
     <th>Games played</th>
     <th>Games won</th>
@@ -12,7 +13,8 @@
   </thead>
 
 <% @users.each do |user| %>
-  <tr>
+   <tr>
+    <td><%= user.id %></td>    
     <td><%= user.name %></td>
     <td><%= user.games_played %></td>
     <td><%= user.games_won %></td>
