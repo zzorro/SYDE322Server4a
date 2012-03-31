@@ -84,7 +84,7 @@ User.create(name:'USER1', games_played:'2', games_won:'0', running_score:'21' )
 User.create(name:'USER2', games_played:'1', games_won:'0', running_score:'21' )
 User.create(name:'USER3')
 
-Game.create(name:'GameRoomOne', open:'false')
+Game.create(name:'GameRoomOne', open:'false', song_id:'1')
 Game.create(name:'GameRoomTwo', open:'true')
 Game.create(name:'GameRoomThree', open:'true')
 
