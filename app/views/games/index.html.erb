@@ -5,6 +5,7 @@
     <th>ID</th>
     <th>Name</th>
     <th>Open</th>
+    <th>SongID</th>    
     <th></th>
   </tr>
 
@@ -13,9 +14,10 @@
     <td><%= game.id %></td>     
     <td><%= game.name %></td>
     <td><%= game.open %></td>
+    <td><%= game.song_id %></td>    
     <td><%= link_to 'Show', game, class: "btn btn-small" %>
     <%= link_to 'Edit', edit_game_path(game), class: "btn btn-small" %>
-    <%= link_to 'Destroy', game, confirm: 'Are you sure?', method: :delete, class: "btn btn-small" %></td>
+    </td>
   </tr>
 <% end %>
 </table>
