@@ -79,3 +79,12 @@ You had my heart and soul in your hand
 (Tears are gonna fall, rolling in the deep)
 But you played it, you played it, you played it to the beat"
 )
+
+User.create(name:'USER1', games_played:'2', games_won:'0', running_score:'21' )
+User.create(name:'USER2', games_played:'1', games_won:'0', running_score:'21' )
+User.create(name:'USER3')
+
+Game.create(name:'GameRoomOne', open:'false')
+Game.create(name:'GameRoomTwo', open:'true')
+Game.create(name:'GameRoomThree', open:'true')
+
