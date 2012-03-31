@@ -2,7 +2,17 @@ class GamesController < ApplicationController
   # GET /games
   # GET /games.json
   def index
-    @games = Game.all
+   # @games = Game.all
+    @games = if params[:name]
+      Game.find_all_by_name(params[:name])
+    elsif params[:id]
+      Game.find_all_by_id(params[:id])
+    elsif params[:open]
+      Game.find_all_by_open(params[:open])
+    else
+      Game.all
+    end
+
 
     respond_to do |format|
       format.html # index.html.erb
