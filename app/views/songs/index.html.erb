@@ -17,6 +17,7 @@
     <td><%= song.lyrics %></td>
     <td><%= link_to 'Show', song, class: "btn btn-small" %>
     <%= link_to 'Edit', edit_song_path(song), class: "btn btn-small" %>
+    <%= link_to 'Destroy', song, confirm: 'Are you sure?', method: :delete, class: "btn btn-small" %>
     </td>
   </tr>
 <% end %>

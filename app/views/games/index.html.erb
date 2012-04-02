@@ -17,6 +17,7 @@
     <td><%= game.song_id %></td>    
     <td><%= link_to 'Show', game, class: "btn btn-small" %>
     <%= link_to 'Edit', edit_game_path(game), class: "btn btn-small" %>
+    <%= link_to 'Destroy', game, confirm: 'Are you sure?', method: :delete, class: "btn btn-small" %>
     </td>
   </tr>
 <% end %>

@@ -21,6 +21,7 @@
     <td><%= user.running_score %></td>
     <td><%= link_to 'Show', user, class: "btn btn-small" %>
     <%= link_to 'Edit', edit_user_path(user), class: "btn btn-small" %>
+    <%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete, class: "btn btn-small" %>
     </td>
   </tr>
 <% end %>
